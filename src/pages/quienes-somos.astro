@@ -1,0 +1,93 @@
+---
+// import { Icon } from "astro-icon";
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import Footer from "../components/Footer.astro";
+import MenuMobil from "../components/MenuMobil.astro";
+---
+
+<Layout title="Dr Henry Aguirre | Quienes Somos">
+
+<main>
+
+    <header>
+        <Top />
+  
+        <div class="bg_header__fondo animate-fade animate-duration-[900ms]">
+          <div class="">
+            <div class="contenedor mx-auto py-10 flex items-center justify-center">
+                <a href="/">
+                    <img class="inline-block" width="250" src="/img/logodrvertical.svg" alt="Logo">
+                </a>
+            </div>
+            <div class="lg:hidden">
+                <MenuMobil />
+              </div>
+              <div class="color__back__menu hidden lg:block">
+                <div
+                  class="contenedor mx-auto flex justify-center items-center h-16"
+                >
+                  <div class="">
+                    <Menu />
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="back__quien__somos">
+            <div class="contenedor mx-auto flex flex-col justify-center items-center py-20 ">
+                <h2 class="text-4xl sm:text-5xl">Quienes Somos</h2>
+                <p class="text-center text-[#323756] text-sm sm:text-lg">Satisfacción de nuestros pacientes con resultados reales</p>
+            </div>
+        </div>
+      </header>
+
+      <section class="my-20">
+        <div class="contenedor mx-auto grid grid-cols-1 lg:grid-cols-2">
+            <div class="imagen__dr__izquierda h-screen">
+                
+            </div>
+            <div class="flex flex-col justify-center p-10 lg:p-20">
+                <p class="mb-2 text-[#323756] font-semibold">Cirujano Plástico, Estético & Reconstructivo</p>
+                <h2 class="text-6xl mb-10">Dr. Henry Aguirre</h2>
+                <p class="mb-5">Soy Médico Cirujano graduado en la Universidad Nacional de Loja y especializado en Cirugía Plástica Estética y Reconstructiva en la Universidad de Guayaquil.</p>
+                <p class="mb-5">Miembro de la Federación Iberoamericana de Cirugía Plástica y de la Sociedad Ecuatoriana de Cirugía Plástica y Reconstructiva de Ecuador, soy ‘Cleft Surgeon’ (Cirujano de fisuras faciales) de Operación Sonrisa para cirugías reconstructivas a pacientes con fisuras faciales.</p>
+                <p class="mb-5">Desde el año 2012 hasta la actualidad laboro como cirujano plástico estético y reconstructivo en la Clínica Abendaño ubicada en la ciudad de Loja – Ecuador.</p>
+                <p class="mb-5">La experiencia y profesionalismo obtenidos me han permitido desempeñarme dentro de mis funciones en otras casas de salud, como el Hospital Carlos Andrade Marín en la ciudad de Quito – Ecuador, Hospital Isidro Ayora y Hospital Manuel Ignacio Monteros en Loja – Ecuador, Hospital del Niño `Francisco de Ycaza’ en Guayaquil – Ecuador  concretamente en el área de cirugía reconstructiva tanto en la Unidad de Cirugía Plástica Reconstructiva y Unidad de Quemados.</p>
+            </div>
+        </div>
+      </section>
+
+      <footer>
+        <Footer />
+      </footer>
+
+</main>
+
+</Layout>
+
+
+<style>
+    .color__back__menu {
+        background-color: #e8f1ff75;
+      }
+
+    .back__quien__somos{
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5);
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .imagen__dr__izquierda{
+        background-image: url(../img/IMG_5467-Editarcopia-scaled.avif);
+        background-size: cover;
+        background-position: center;
+    }
+
+
+</style>

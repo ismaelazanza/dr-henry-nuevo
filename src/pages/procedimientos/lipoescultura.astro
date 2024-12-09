@@ -1,0 +1,186 @@
+---
+// import { Icon } from "astro-icon";
+import Layout from "../../layouts/Layout.astro";
+import Top from "../../components/Top.astro";
+import Menu from "../../components/Menu.astro";
+import Footer from "../../components/Footer.astro";
+import PlantillasProcedimientos from "../../components/cardProdecimientos/PlantillasProcedimientos.astro";
+import MenuMobil from "../../components/MenuMobil.astro";
+
+---
+
+
+
+<Layout title="Dr Henry Aguirre | Lipoescultura">
+  <main>
+    <header id="hero">
+      <div class="promo">
+
+        <Top />
+
+        <div class="bg_header__fondo animate-fade animate-duration-[900ms]">
+          <div class="">
+            <div
+              class="contenedor mx-auto py-10 flex items-center justify-center"
+            >
+              <a href="/">
+                <img
+                  class="inline-block"
+                  width="250"
+                  src="/img/logodrvertical.svg"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+
+            <div class="lg:hidden">
+              <MenuMobil />
+            </div>
+            <div class="color__back__menu hidden lg:block">
+              <div
+                class="contenedor mx-auto flex justify-center items-center h-16"
+              >
+              <div class="">
+                <Menu />
+              </div>
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="back__procedmientos">
+            <div
+              class="contenedor mx-auto flex flex-col justify-center items-center py-20"
+            >
+              <h2 class="text-4xl sm:text-5xl">Lipoescultura</h2>
+              <p class="text-sm sm:text-lg text-center text-[#323756]">
+                Elimina la grasa acumulada y esculpe tu figura <br /> con la
+                lipoescultura de alta definición.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    <!-- 
+      <video muted autoplay loop>
+        <source src="../../img/videoback2.mp4" type="video/mp4" />
+      </video>
+
+    -->
+
+      <div class="capa"></div>
+
+    </header>
+
+    <section>
+      <PlantillasProcedimientos
+      
+        titulo="Lipoescultura"
+        description1="La Lipoescultura es una cirugía que nos permite remodelar por completo el contorno corporal con técnicas de lipofilling, tejido adiposo o grasa y extraída mediante liposucción o lipoaspiración."
+        description2="Esta cirugía estética consiste en extraer grasa y tejido adiposo de diferentes sitios del cuerpo con jeringa o cánula conectada a una máquina succionadora."
+
+        description3="Recupera la figura natural de tu cuerpo y junto con ella tu confianza"
+        description4="Mejora tu contorno corporal rápidamente."
+        description5="Te liberas de la grasa sin dietas ni ejercicios."
+        description6="Cicatrices imperceptibles."
+        description7="Mejora tu autoestima con un cuerpo moldeado y armónico."
+        imgRecupera="/img/WhatsApp-Image-2023-09-21-at-20.03.34.avif"
+
+
+        srcCasosUno="/img/img__resul1.avif"
+        dataCasosUno="/img/img__resul1.avif"
+        descrCasosUno="Imagen de Cirugia"
+
+        srcCasosDos="/img/img__resul2.avif"
+        dataCasosDos="/img/img__resul2.avif"
+        descrCasosDos="Imagen de Cirugia"
+
+        srcCasosTres="/img/img__resul3.avif"
+        dataCasosTres="/img/img__resul3.avif"
+        descrCasosTres="Imagen de Cirugia"
+
+        srcCasosCuatro="/img/img__resul4.avif"
+        dataCasosCuatro="/img/img__resul4.avif"
+        descrCasosCuatro="Imagen de Cirugia"
+
+        srcCasosCinco="/img/photo1705958024.avif"
+        dataCasosCinco="/img/photo1705958024.avif"
+        descrCasosCinco="Imagen de Cirugia"
+
+
+      />
+    </section>
+
+    <footer>
+      <Footer />
+    </footer>
+  </main>
+</Layout>
+
+<style>
+
+  #hero{
+    position: relative;
+  }
+
+  .promo{
+    position: relative;
+    z-index: 2;
+  }
+
+  video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.5;
+    mix-blend-mode: luminosity;
+  }
+
+
+  .color__back__menu {
+    
+    border-top: .9px solid #e8f1ffd7;
+    border-bottom: .9px solid #e8f1ffd7;
+
+    /* background-color: #e8f1ff75; */
+  }
+
+  .bg_header__fondo {
+  background-image: url(../../img/doctor-drawing-dashed-line-marks-on-female-body-be-2023-10-19-23-55-23-utc.avif);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5);
+
+    /*
+  background-image: linear-gradient(
+      to right top,
+      #d6dae0,
+      #ccd0d7,
+      #c2c7ce,
+      #b8bdc6,
+      #aeb4bd,
+      #aeb4bd,
+      #aeb4bd,
+      #aeb4bd,
+      #b8bdc6,
+      #c2c7ce,
+      #ccd0d7,
+      #d6dae0
+    );
+    border-bottom: 1px solid #eaeaea;*/
+  } 
+</style>

@@ -1,0 +1,164 @@
+---
+// import { Icon } from "astro-icon";
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import Footer from "../components/Footer.astro";
+import ProcedimientosPrincipal from "../components/cardProdecimientos/ProcedmientosPrincipal.astro";
+import MenuMobil from "../components/MenuMobil.astro";
+---
+
+<Layout title="Dr Henry Aguirre | Procedimientos">
+  <main>
+    <header>
+      <Top />
+
+      <div class="bg_header__fondo animate-fade animate-duration-[900ms]">
+        <div class="">
+          <div
+            class="contenedor mx-auto py-10 flex items-center justify-center"
+          >
+            <a href="/">
+              <img
+                class="inline-block"
+                width="250"
+                src="/img/logodrvertical.svg"
+                alt="Logo"
+              />
+            </a>
+          </div>
+          <div class="lg:hidden">
+            <MenuMobil />
+          </div>
+          <div class="color__back__menu hidden lg:block">
+            <div
+              class="contenedor mx-auto flex justify-center items-center h-16"
+            >
+              <div class="">
+                <Menu />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="back__procedmientos">
+        <div
+          class="contenedor mx-auto flex flex-col justify-center items-center py-20"
+        >
+          <h2 class="text-4xl sm:text-5xl">Procedimientos</h2>
+          <p class="text-center text-[#323756] text-sm sm:text-lg">
+            Apoyamos nuestros procedimientos quirúrgicos <br />
+             con opciones no invasivas de alta calidad y tecnología.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="contenedor mx-auto grid grid-cols-1 my-20 gap-5 px-5 md:grid-cols-2 lg:grid-cols-3">
+      <ProcedimientosPrincipal
+        title="Lipoescultura"
+        des="La Lipoescultura es una cirugía que nos permite remodelar por completo el contorno..."
+        href="/procedimientos/lipoescultura"
+        img="/img/abdominoplastia2.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Rinoplastia"
+        des="Es uno de los procedimientos quirúrgicos más frecuentemente realizados en cirugía..."
+        href="/procedimientos/rinoplastia"
+        img="/img/rinoplastia-cirugia.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Abdominoplastia"
+        des="La abdominoplastia también conocida como marcación abdominal es  una intervención..."
+        href="/procedimientos/abdominoplastia"
+        img="/img/cicatriz-abdominoplastia-fija.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Gluteoplastia"
+        des="El levantamiento de glúteos, también llamado aumento de glúteos, es un procedimiento..."
+        href="/procedimientos/gluteoplastia"
+        img="/img/gluteoplastia2.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Face Lifting"
+        des="El lifting facial, también conocido como estiramiento facial, es un procedimiento..."
+        href="/procedimientos/face-lifting"
+        img="/img/facelifting.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Mamoplastia"
+        des="La mamoplastia es un conjunto de técnicas quirúrgicas que tienen como objetivo dar forma..."
+        href="/procedimientos/mamoplastia"
+        img="/img/mamoplastia.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Cirugía Reconstructiva"
+        des="La cirugía plástica y reconstructiva es una parte de la especialidad que difiere un poco..."
+        href="/procedimientos/cirugia-reconstructiva"
+        img="/img/reconstructiva.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Labio y Paladar Hendido"
+        des="El labio hendido y el paladar hendido son defectos de nacimiento que se producen cuando el labio..."
+        href="/procedimientos/labio-y-paladar-hendido"
+        img="/img/labio.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Cirugía de Quemados"
+        des="Las quemaduras son unos de los accidentes menos frecuentes, pero de los más graves que podemos..."
+        href="/procedimientos/cirugia-de-quemados"
+        img="/img/quemado.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Estética de Labios"
+        des="La queiloplastia o cirugía de los labios es una intervención estética muy sencilla que proporciona..."
+        href="/procedimientos/estetica-de-labios"
+        img="/img/labios.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Estética de Párpados"
+        des="Los ojos son el centro de atención cuando conoces a una persona, cualquier desbalance..."
+        href="/procedimientos/estetica-de-parpados"
+        img="/img/parpados.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Estética de Orejas"
+        des="La otoplastia es la cirugía que se realiza para reposicionar las orejas prominentes..."
+        href="/procedimientos/estetica-de-orejas"
+        img="/img/orejas.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Lipotransferencia"
+        des="Este es un procedimiento que ha ganado popularidad en los últimos años..."
+        href="/procedimientos/lipotransferencia"
+        img="/img/lipotransferecnia.avif"
+      />
+      <ProcedimientosPrincipal
+        title="Aumento de Pantorrilla"
+        des="Es un procedimiento quirúrgico dirigido a aumentar el volumen de la zona de los músculos gemelos..."
+        href="/procedimientos/aumento-de-pantorrilla"
+        img="/img/pantorrillas.avif"
+      />
+    </section>
+
+    <footer>
+      <Footer />
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  .color__back__menu {
+    background-color: #e8f1ff75;
+  }
+
+  .back__procedmientos {
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5);
+    border-bottom: 1px solid #eaeaea;
+  }
+</style>

@@ -1,0 +1,263 @@
+---
+import { Icon } from 'astro-icon/components'
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import CardProcedimiento from "../components/cardIndex/CardProcedimientos.astro";
+import BiografiaIndex from "../components/cardIndex/BiografiaIndex.astro";
+import BannerContacto from "../components/cardIndex/BannerContacto.astro";
+import CardCuadros from "../components/cardIndex/CardCuadros.astro";
+import Testimonial from "../components/cardIndex/Testimonial.astro"
+import Footer from "../components/Footer.astro";
+import MenuMobil from "../components/MenuMobil.astro";
+import PlayerPrueba from "../components/PlayerPrueba.astro";
+
+---
+
+
+
+<Layout title="Dr Henry Aguirre | Cirujano Plástico">
+  <main>
+    <header class="ocutar">
+      <Top />
+
+      <div class="bg_header__fondo animate-fade animate-duration-[900ms]">
+        <div class="lg:hidden">
+          <MenuMobil />
+        </div>
+        <div class="color__back__menu hidden lg:block">
+          <div
+            class="contenedor mx-auto flex justify-center items-center h-16"
+          >
+            <div class="">
+              <Menu />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="contenedor mx-auto flex flex-col items-center justify-center h-[40rem] animate-fade-up animate-once animate-duration-500 animate-delay-400"
+        >
+        <a href="/">
+          <img
+            class="mb-10"
+            width="400"
+            src="/img/logodrvertical.svg"
+            alt="Logo"
+          />
+        </a>
+
+          <h1
+            class="text-center text-[#005d99] tracking-widest font-extralight animate-fade-up animate-once animate-duration-500 animate-delay-200"
+          >
+            ESTAMOS COMPROMETIDOS CON LA <br />
+            <strong>SEGURIDAD PERSONAL</strong> DE NUESTROS PACIENTES Y <br />
+             LOS <strong>RESULTADOS QUE DESEAN OBTENER</strong>
+          </h1>
+          <img src="/img/soloslogan.svg" alt="Firma" />
+        </div>
+      </div>
+    </header>
+
+    <div class="contenedor mx-auto my-32 px-5 ocutar">
+      <h2 class="text-center animate-fade-up animate-once animate-duration-500 animate-delay-[400ms] text-2xl sm:text-4xl">
+        ¿Estas buscando cirugía plástica con <br /> resultados muy naturales y
+        exclusivos para ti?
+      </h2>
+      <p class="text-center animate-fade-up animate-once animate-duration-500 animate-delay-[600ms] text-base lg:text-xl">
+        Descubre mi verdadera vocación como Cirujano Plástico: ayudarte a
+        alcanzar tu sueño de tener un cuerpo hermoso y <br /> sentirte más
+        segura que nunca. <strong
+          >¡Tu transformación está a solo un paso de distancia!</strong
+        >
+      </p>
+      <div class="grid grid-cols-1 text-center mt-10 animate-fade-up animate-once animate-duration-500 animate-delay-[800ms] lg:grid-cols-6">
+        <div class="col-[1/-1] lg:col-[3/4] ">
+          <p class="text-6xl font-semibold tracking-tighter">+13K</p>
+          <p class="text-sm">Cirugías realizadas con éxito</p>
+        </div>
+        <div class="col-[1/-1] lg:col-[4/5]">
+          <p class="text-6xl font-semibold tracking-tighter">+20</p>
+          <p class="text-sm">Años de experiencia</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contenedor mx-auto grid grid-cols-1 gap-2 h-80 mt-32 mb-20 md:grid-cols-2 lg:grid-cols-3 lg:mb-10">
+      <a
+        class="img__uno flex flex-col justify-end p-10 hover:shadow-2xl transition-all hover:scale-95"
+        href="/procedimientos/lipoescultura"
+      >
+        <h2 class="text-[#005d99] text-2xl mb-2">LIPOESCULTURA</h2>
+        <p
+          class="text-[#3ca9d2] uppercase underline text-sm font-light tracking-wider"
+        >
+          Conoce Más
+          <Icon name="bi:arrow-right" class="text-[#3ca9d2] w-5 h-5" />
+        </p>
+      </a>
+
+      <a
+        class="img__dos flex flex-col justify-end p-10 hover:scale-95 hover:shadow-2xl transition-all"
+        href="/procedimientos/rinoplastia"
+      >
+        <h2 class="text-[#005d99] text-2xl mb-2">RINOPLASTIA</h2>
+        <p
+          class="text-[#3ca9d2] uppercase underline text-sm font-light tracking-wider"
+        >
+          Conoce Más
+          <Icon name="bi:arrow-right" class="text-[#3ca9d2] w-5 h-5l" />
+        </p>
+      </a>
+
+      <a
+        class="img__tres flex flex-col justify-end p-10 hover:scale-95 hover:shadow-2xl transition-all"
+        href="/procedimientos/abdominoplastia"
+      >
+        <h2 class="text-[#005d99] text-2xl mb-2">ABDOMINOPLASTIA</h2>
+        <p
+          class="text-[#3ca9d2] uppercase underline text-sm font-light tracking-wider"
+        >
+          Conoce Más
+          <Icon name="bi:arrow-right" class="text-[#3ca9d2] w-5 h-5l" />
+        </p>
+      </a>
+    </div>
+
+    <section class="py-32">
+      <div class="contenedor mx-auto text-center">
+        <h2>Más Servicios</h2>
+        <p class="text-2xl text-[#323756] lg:text-4xl">
+          Di ¡Hola! al cambio. Encuentra el <br /> procedimiento ideal para ti
+        </p>
+      </div>
+
+      <div class="contenedor mx-auto grid gap-2 grid-cols-1 mt-10 md:grid-cols-3 lg:grid-cols-6">
+        <CardProcedimiento
+          title="Mamoplastia"
+          src="/img/011-breast.svg"
+          href="/procedimientos"
+        />
+        <CardProcedimiento
+          title="Face Lifting"
+          src="/img/016-jaw contouring.svg"
+          href="/procedimientos"
+        />
+        <CardProcedimiento
+          title="Lipotransferencia"
+          src="/img/039-abdominoplasty.svg"
+          href="/procedimientos"
+        />
+        <CardProcedimiento
+          title="Reconstructiva"
+          src="/img/032-tweezer.svg"
+          href="/procedimientos"
+        />
+        <CardProcedimiento
+          title="Párpados"
+          src="/img/009-eyebrow.svg"
+          href="/procedimientos"
+        />
+        <CardProcedimiento title="Pantorrila" src="/img/044-leg.svg" href="#" />
+      </div>
+    </section>
+
+    <section>
+      <BiografiaIndex />
+    </section>
+    <section>
+      <BannerContacto />
+    </section>
+
+    <section class="bg-white pb-20">
+      <div class="contenedor mx-auto grid grid-cols-1 py-10 gap-y-8 px-5 md:grid-cols-2 lg:grid-cols-3 ">
+        <CardCuadros
+          title="Glúteos"
+          descripcion="Para algunas personas, tener glúteos pequeños o planos pueden causar inseguridad y baja autoestima."
+          src="/img/014-buttocks_2.svg"
+          href="/procedimientos"
+        />
+        <CardCuadros
+          title="Papada"
+          descripcion="La papada es el resultado de una capa de grasa subcutánea que cuelga bajo la barbilla. formando una arruga más o menos perceptible."
+          src="/img/017-jaw contouring.svg"
+          href="/procedimientos"
+        />
+        <CardCuadros
+          title="Párpados"
+          descripcion="Con el paso de los años, se produce un exceso de piel en los párpados superiores, esta circunstancia envejece y da sensación de cansancio."
+          src="/img/010-eyelid.svg"
+          href="/procedimientos"
+        />
+        <CardCuadros
+          title="Otoplastia"
+          descripcion="Con el paso de los años, se produce un exceso de piel en los párpados superiores, esta circunstancia envejece y da sensación de cansancio."
+          src="/img/030-otoplasty.svg"
+          href="/procedimientos"
+        />
+        <CardCuadros
+          title="Explantación"
+          descripcion="Con el paso de los años, se produce un exceso de piel en los párpados superiores, esta circunstancia envejece y da sensación de cansancio."
+          src="/img/013-breast.svg"
+          href="/procedimientos"
+        />
+        <CardCuadros
+          title="Ginecomastia"
+          descripcion="Con el paso de los años, se produce un exceso de piel en los párpados superiores, esta circunstancia envejece y da sensación de cansancio."
+          src="/img/046-abdominals.svg"
+          href="/procedimientos"
+        />
+      </div>
+    </section>
+
+    <PlayerPrueba/>
+
+
+    <section>
+      <Testimonial />
+    </section>
+
+    <footer>
+      <Footer />
+    </footer>
+
+  </main>
+</Layout>
+
+<style lang="scss">
+  header {
+    .bg_header__fondo {
+      background-image: url(../img/cerca-mujer-adulta-lenceria.avif);
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5);
+
+      .color__back__menu {
+       /* background-color: #e8f1ff75;*/
+      }
+    }
+  }
+
+  .img__uno {
+    background-image: url(../img/descripcion1.avif);
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5);
+    border-radius: 0.5rem;
+  }
+  .img__dos {
+    background-image: url(../img/descripcion2.avif);
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5);
+    border-radius: 0.5rem;
+  }
+  .img__tres {
+    background-image: url(../img/descripcion3.avif);
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5);
+    border-radius: 0.5rem;
+  }
+</style>

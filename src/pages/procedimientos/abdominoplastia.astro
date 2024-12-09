@@ -1,0 +1,164 @@
+---
+// import { Icon } from "astro-icon";
+import Layout from "../../layouts/Layout.astro";
+import Top from "../../components/Top.astro";
+import Menu from "../../components/Menu.astro";
+import Footer from "../../components/Footer.astro";
+import PlantillasProcedimientos from "../../components/cardProdecimientos/PlantillasProcedimientos.astro";
+import MenuMobil from "../../components/MenuMobil.astro";
+---
+
+<Layout title="Dr Henry Aguirre | Abdominoplastia">
+  <main>
+    <header id="hero">
+      <div class="promo">
+        <Top />
+
+        <div class="bg_header__fondo animate-fade animate-duration-[900ms]">
+          <div class="">
+            <div
+              class="contenedor mx-auto py-10 flex items-center justify-center"
+            >
+              <a href="/">
+                <img
+                  class="inline-block"
+                  width="250"
+                  src="/img/logodrvertical.svg"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+
+            <div class="lg:hidden">
+              <MenuMobil />
+            </div>
+            <div class="color__back__menu hidden lg:block">
+              <div
+                class="contenedor mx-auto flex justify-center items-center h-16"
+              >
+                <div class="">
+                  <Menu />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="back__procedmientos">
+            <div
+              class="contenedor mx-auto flex flex-col justify-center items-center py-20"
+            >
+              <h2 class="text-4xl sm:text-5xl">Abdominoplastia</h2>
+              <p class="text-sm text-center text-[#323756] sm:text-lg">
+                La rinoplastia es una cirugía en la <br /> que se modifica la
+                forma de la nariz
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <video muted autoplay loop>
+        <source src="../../img/videoback2.mp4" type="video/mp4" />
+      </video>
+
+      <div class="capa"></div>
+    </header>
+
+    <section>
+      <PlantillasProcedimientos
+        titulo="Abdominoplastia"
+        description1="La abdominoplastia también conocida como marcación abdominal es  una intervención en la que se refuerza los músculos en la pared abdominal y reduce en gran medida el aspecto hinchado del abdomen."
+        description2="El procedimiento deja una cicatriz dependiendo de la extensión del problema."
+
+        description3="Mejora el aspecto de tu abdomen y refuerza tu musculatura para lucir mejor"
+        description4="Músculos abdominales más tensos."
+        description5="Eliminación de exceso de piel."
+        description6="Aumenta tu confianza y seguridad."
+        description7="Resultados satisfactorios y duraderos."
+        imgRecupera="/img/abdominoplastiacirugia.avif"
+
+        srcCasosUno="/img/abdominoslider1.avif"
+        dataCasosUno="/img/abdominoslider1.avif"
+        descrCasosUno="Imagen de Cirugia"
+        srcCasosDos="/img/abdominoslider2.avif"
+        dataCasosDos="/img/abdominoslider2.avif"
+        descrCasosDos="Imagen de Cirugia"
+        srcCasosTres="/img/abdominoslider3.avif"
+        dataCasosTres="/img/abdominoslider3.avif"
+        descrCasosTres="Imagen de Cirugia"
+        srcCasosCuatro="/img/photo1705958002.avif"
+        dataCasosCuatro="/img/photo1705958002.avif"
+        descrCasosCuatro="Imagen de Cirugia"
+        srcCasosCinco="/img/abdominoslider2.avif"
+        dataCasosCinco="/img/abdominoslider2.avif"
+        descrCasosCinco="Imagen de Cirugia"
+      />
+    </section>
+
+    <footer>
+      <Footer />
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  #hero {
+    position: relative;
+  }
+
+  .promo {
+    position: relative;
+    z-index: 2;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.5;
+    mix-blend-mode: luminosity;
+  }
+
+  .color__back__menu {
+    border-top: 0.9px solid #e8f1ffd7;
+    border-bottom: 0.9px solid #e8f1ffd7;
+
+    /* background-color: #e8f1ff75; */
+  }
+
+  .bg_header__fondo {
+    /* background-image: url(../../img/topless-lady-covering-breast-with-hand-after-breas-2023-11-25-02-53-07-utc.jpg);
+  background-size: cover;
+  background-position: top;
+  box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5); */
+
+    /*
+  background-image: linear-gradient(
+      to right top,
+      #d6dae0,
+      #ccd0d7,
+      #c2c7ce,
+      #b8bdc6,
+      #aeb4bd,
+      #aeb4bd,
+      #aeb4bd,
+      #aeb4bd,
+      #b8bdc6,
+      #c2c7ce,
+      #ccd0d7,
+      #d6dae0
+    );
+    border-bottom: 1px solid #eaeaea; */
+  }
+</style>

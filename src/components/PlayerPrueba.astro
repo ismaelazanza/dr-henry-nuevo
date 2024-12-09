@@ -1,0 +1,145 @@
+<section class="back_video">
+
+    <div class="h-96 flex justify-center items-center">
+
+        <button id="popup-button" class="play-button hover:scale-105 bg-[#005D99] hover:bg-[#4CA9D2] transition-all">
+            <svg viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+            </svg>
+        </button>
+        
+        <div id="popup-container" class="popup-container">
+            <span class="close-button" onclick="closePopup()">X</span>
+            <div class="video-container">
+                <iframe id="youtube-iframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <a href="">
+            
+        </a>
+
+    </div>
+</section>
+
+
+<style>
+    .popup-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .popup-container.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .video-container {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .play-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        height: 80px;
+        width: 80px;
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .play-button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .video-container {
+            width: 90%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+        }
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        .video-container {
+            width: 700px;
+            height: 393.75px; /* 16:9 aspect ratio */
+        }
+    }
+
+    @media only screen and (min-width: 1025px) {
+        .video-container {
+            width: 800px;
+            height: 450px; /* 16:9 aspect ratio */
+        }
+    }
+
+    .back_video{
+        background-image: url(../img/blepharoplasty-plastic-surgery-operation-for-corr-2024-01-15-17-16-22-utc.jpg);
+        background-color: rgba(248, 247, 216, 0.7);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        box-shadow: inset 0 0 0 2000px #f8fafc41;
+    }
+
+</style>
+
+<script is:inline>
+    function openPopup(videoId) {
+        var popupContainer = document.getElementById('popup-container');
+        var youtubeIframe = document.getElementById('youtube-iframe');
+
+        youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
+        popupContainer.classList.add('show');
+    }
+
+    function closePopup() {
+        var popupContainer = document.getElementById('popup-container');
+        var youtubeIframe = document.getElementById('youtube-iframe');
+
+        youtubeIframe.src = "";
+        popupContainer.classList.remove('show');
+    }
+
+    var popupButton = document.getElementById('popup-button');
+    popupButton.addEventListener('click', function() {
+        openPopup("_hpNCBLAViw");
+    });
+</script>

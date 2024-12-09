@@ -1,0 +1,130 @@
+---
+// import { Icon } from "astro-icon";
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import Footer from "../components/Footer.astro";
+import MenuMobil from "../components/MenuMobil.astro";
+---
+
+<Layout title="Dr Henry Aguirre | Contacto">
+
+<main>
+
+    <header>
+        <Top />
+  
+        <div class="bg_header__fondo animate-fade animate-duration-[900ms]">
+          <div class="">
+            <div class="contenedor mx-auto py-10 flex items-center justify-center">
+                <a href="/">
+                    <img class="inline-block" width="250" src="/img/logodrvertical.svg" alt="Logo">
+                </a>
+            </div>
+            <div class="lg:hidden">
+                <MenuMobil />
+              </div>
+              <div class="color__back__menu hidden lg:block">
+                <div
+                  class="contenedor mx-auto flex justify-center items-center h-16"
+                >
+                  <div class="">
+                    <Menu />
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="back__quien__somos">
+            <div class="contenedor mx-auto flex flex-col justify-center items-center py-20 ">
+                <h2 class="text-4xl sm:text-5xl">Contacto</h2>
+                <p class="text-center text-[#323756] text-sm sm:text-lg">Nos complace responder cualquier pregunta o inquietud.</p>
+            </div>
+        </div>
+      </header>
+
+      <section class="contenedor mx-auto grid grid-cols-1 my-20 gap-10 lg:grid-cols-2">
+        <div>
+            <section class=" dark:bg-gray-900">
+                <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Formulario</h2>
+                    <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Deja tu mensaje en el siguiente formulario y en breve nuestro equipo te atenderá. Lo más pronto posible te responderemos, atento a tu correo</p>
+                    <form action="https://formsubmit.co/ismaelazanza@gmail.com" method="POST" class="space-y-8">
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tu email</label>
+                            <input name="email" type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@drhenryaguirre.com" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Asunto</label>
+                            <input name="subject" type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Permítenos saber en qué te podemos ayudar" required>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tu Mensaje</label>
+                            <textarea name="message" id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Deja un comentario..."></textarea>
+                        </div>
+                        <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-gray-900 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">ENVIAR MENSAJE</button>
+
+                        <input type="hidden" name="_next" value="https://drhenryaguirre.com/">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+              </section>
+        </div>
+        <div class="p-10 flex flex-col justify-center">
+            <div class="mb-5">
+                <p class="font-semibold text-[#323756]">DIRECCIÓN:</p>
+                <p>Clinica Abendaño, Calle: Leopoldo Palacios</p>
+            </div>
+
+            <div class="mb-5">
+                <p class="font-semibold text-[#323756]">TELÉFONO:</p>
+                <p>(07) 272-4410</p>
+                <p>(593) 93 937 3985</p>
+            </div>
+
+            <div class="mb-5">
+                <p class="font-semibold text-[#323756]">EMAIL:</p>
+                <p>drhaguirre@gmail.com</p>
+            </div>
+
+            <div class="mb-5">
+                <p class="font-semibold text-[#323756]">CIUDAD:</p>
+                <p>Loja - Ecuador</p>
+            </div>
+
+        </div>
+      </section>
+
+
+      <footer>
+        <Footer />
+      </footer>
+
+</main>
+
+</Layout>
+
+
+<style>
+    .color__back__menu {
+        background-color: #e8f1ff75;
+      }
+
+    .back__quien__somos{
+        background-image: url();
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5);
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .imagen__dr__izquierda{
+        background-image: url(../img/IMG_5467-Editarcopia-scaled.avif);
+        background-size: cover;
+        background-position: center;
+    }
+
+
+</style>

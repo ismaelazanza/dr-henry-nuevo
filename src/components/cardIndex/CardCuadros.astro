@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+	title: string;
+	descripcion: string;
+	src?: string;
+    href: string;
+}
+
+const { src, title, descripcion, href } = Astro.props;
+---
+
+<div class="flex">
+
+    <div class="mr-5">
+        <img src={src} width="60" height="60" alt="Icono">
+    </div>
+
+    <div>
+        <h2 class="uppercase mb-2 text-xl">{title}</h2>
+        <p class="mb-2 text-base">{descripcion}</p>
+        <div class="inline-block">
+            <a class="flex text-[#3ca9d2] font-light" href={href}>
+                Conocer más
+                <Icon name="mdi:arrow-right-thin" class="w-6">;
+            </a>
+        </div>
+
+    </div>
+
+
+</div>

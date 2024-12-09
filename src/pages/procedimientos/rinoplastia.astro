@@ -1,0 +1,203 @@
+---
+// import { Icon } from "astro-icon";
+import Layout from "../../layouts/Layout.astro";
+import Top from "../../components/Top.astro";
+import Menu from "../../components/Menu.astro";
+import Footer from "../../components/Footer.astro";
+import PlantillasProcedimientos from "../../components/cardProdecimientos/PlantillasProcedimientos.astro";
+import MenuMobil from "../../components/MenuMobil.astro";
+
+---
+
+
+
+<Layout title="Dr Henry Aguirre | Rinoplastia">
+  <main>
+    <header id="hero">
+      <div class="promo">
+
+        <Top />
+
+        <div class="bg_header__fondo animate-fade animate-duration-[900ms]">
+          <div class="">
+            <div
+              class="contenedor mx-auto py-10 flex items-center justify-center"
+            >
+              <a href="/">
+                <img
+                  class="inline-block"
+                  width="250"
+                  src="/img/logodrvertical.svg"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+
+            <div class="lg:hidden">
+              <MenuMobil />
+            </div>
+            <div class="color__back__menu hidden lg:block">
+              <div
+                class="contenedor mx-auto flex justify-center items-center h-16"
+              >
+              <div class="">
+                <Menu />
+              </div>
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="back__procedmientos">
+            <div
+              class="contenedor mx-auto flex flex-col justify-center items-center py-20"
+            >
+              <h2 class="text-4xl sm:text-5xl">Rinoplastia</h2>
+              <p class="text-sm sm:text-lg text-center text-[#323756]">
+                La rinoplastia es una cirugía en la <br> que se modifica la forma de la nariz
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <video muted autoplay loop class="videoHeader" >
+          <source src="../../img/videoback2.mp4" type="video/mp4"
+          >
+      </video>
+
+      <div class="capa"></div>
+
+    </header>
+
+    <section>
+
+      <section class="contenedor__textos mx-auto my-20 px-5 md:flex">
+        <div class="p-4 content-center">
+          <p class="sm:text-7xl text-6xl cambio__fuente__fina text-[#323756] mb-5">
+            Rinoplastia
+          </p>
+          <p class="mb-5">
+            Es uno de los procedimientos quirúrgicos más frecuentemente realizados en cirugía plástica.
+          </p>
+          <p class="mb-5">
+            Se trata de una cirugía destinada modificar la forma y tamaño de la nariz con el objetivo de conseguir una mejor armonía facial estética y funcional.
+          </p>
+        </div>
+
+        <video muted autoplay loop controls class="w-[auto] h-[650px] items-center">
+          <source src="../../img/RinoplastiaPromo.webm" type="video/mp4"/>
+        </video>
+      
+      
+      </section>
+
+      <PlantillasProcedimientos
+      
+        description3="Los candidatos ideales para someterse a una rinoplastia son aquellas personas que buscan:"
+        description4="Solucionar un problema estético."
+        description5="Una mejoría en el aspecto de su nariz pero no una perfección absoluta en su apariencia."
+        description6="Para reparar problemas causados por una lesión."
+        description7="Corregir un defecto congénito o mejorar ciertas dificultades respiratorias."
+        imgRecupera="/img/photo_4987776475130342582_y-e1697060374532.avif"
+
+
+        srcCasosUno="/img/rino1.avif"
+        dataCasosUno="/img/rino1.avif"
+        descrCasosUno="Imagen de Cirugia"
+
+        srcCasosDos="/img/rino2.avif"
+        dataCasosDos="/img/rino2.avif"
+        descrCasosDos="Imagen de Cirugia"
+
+        srcCasosTres="/img/rino3.avif"
+        dataCasosTres="/img/rino3.avif"
+        descrCasosTres="Imagen de Cirugia"
+
+        srcCasosCuatro="/img/rino4.avif"
+        dataCasosCuatro="/img/rino4.avif"
+        descrCasosCuatro="Imagen de Cirugia"
+
+        srcCasosCinco="/img/rino5.avif"
+        dataCasosCinco="/img/rino5.avif"
+        descrCasosCinco="Imagen de Cirugia"
+      />
+    </section>
+
+    <footer>
+      <Footer />
+    </footer>
+  </main>
+</Layout>
+
+<style>
+
+.contenedor__textos {
+    max-width: 1000px;
+  }
+
+  #hero{
+    position: relative;
+  }
+
+  .promo{
+    position: relative;
+    z-index: 2;
+  }
+
+  .videoHeader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.5;
+    mix-blend-mode: luminosity;
+  }
+
+
+  .color__back__menu {
+    
+    border-top: .9px solid #e8f1ffd7;
+    border-bottom: .9px solid #e8f1ffd7;
+
+    /* background-color: #e8f1ff75; */
+  }
+
+  .bg_header__fondo {
+ /* background-image: url(../../img/topless-lady-covering-breast-with-hand-after-breas-2023-11-25-02-53-07-utc.jpg);
+  background-size: cover;
+  background-position: top;
+  box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5); */
+    
+  /*
+  background-image: linear-gradient(
+      to right top,
+      #d6dae0,
+      #ccd0d7,
+      #c2c7ce,
+      #b8bdc6,
+      #aeb4bd,
+      #aeb4bd,
+      #aeb4bd,
+      #aeb4bd,
+      #b8bdc6,
+      #c2c7ce,
+      #ccd0d7,
+      #d6dae0
+    );
+    border-bottom: 1px solid #eaeaea; */
+  }
+</style>

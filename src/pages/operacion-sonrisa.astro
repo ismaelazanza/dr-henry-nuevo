@@ -1,0 +1,266 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+import Top from "../components/Top.astro";
+import Menu from "../components/Menu.astro";
+import Footer from "../components/Footer.astro";
+import PlantillasProcedimientos from "../components/cardProdecimientos/PlantillasProcedimientos.astro";
+import MenuMobil from "../components/MenuMobil.astro";
+import SliderOperacionSonrisa from "../components/SliderOperacionSonrisa.astro";
+---
+
+<Layout title="Dr Henry Aguirre | Operación Sonrisa">
+  <main>
+    <header id="hero">
+      <div class="promo">
+        <Top />
+
+        <div class="bg_header__fondo animate-fade animate-duration-[900ms]">
+          <div class="">
+            <div
+              class="contenedor mx-auto py-10 flex items-center justify-center"
+            >
+              <a href="/">
+                <img
+                  class="inline-block"
+                  width="250"
+                  src="/img/logodrvertical.svg"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+
+            <div class="lg:hidden">
+              <MenuMobil />
+            </div>
+            <div class="color__back__menu hidden lg:block">
+              <div
+                class="contenedor mx-auto flex justify-center items-center h-16"
+              >
+                <div class="">
+                  <Menu />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="back__procedmientos flex flex-col justify-center items-center p-10">
+            <div class="contenedor mx-auto flex flex-col justify-center items-center">
+              <img src="/img/Fundacion-Operacion-Sonrisas-Colombia-logo-back.png" alt="Logo">
+              <p class="text-sm text-center text-[#323756] sm:text-lg">
+                Todo lo que debe saber sobre esta cirugía
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- 
+      <video muted autoplay loop>
+        <source src="../../img/videoback2.mp4" type="video/mp4" />
+      </video>
+
+    -->
+      <div class="capa"></div>
+    </header>
+
+
+    <section class="contenedor mx-auto text-center m-32 px-5">
+
+      <h2>UNA SONRISA ES UNA ESPERANZA</h2>
+      <p>Cada 3 minutos nace un niño con labio o paladar hendido. En Operación Sonrisa estamos <br> convencidos de que cada niño merece atención quirúrgica segura y oportuna que transformará su vida para siempre.</p>
+
+      <section class="grid grid-cols-1 text-center mt-10 lg:grid-cols-3">
+        <div class="flex flex-col justify-center items-center">
+          <img src="/img/PhUsersBold.svg" width="60" class="mb-5" alt="Icono">
+          <h2 class="mb-0">+40 AÑOS</h2>
+          <p class="text-base">Regalando sonrisas por el mundo</p>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <img src="/img/TablerWorldPin.svg" width="60" class="mb-5" alt="Icono">
+          <h2 class="mb-0">+30 PAÍSES</h2>
+          <p class="text-base">Con misiones médicas activas en 2021</p>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <img src="/img/IconamoonHeartBold.svg" width="60" class="mb-5" alt="Icono">
+          <h2 class="mb-0">+300K PACIENTES</h2>
+          <p class="text-base">Han cambiado su vida desde 1982</p>
+        </div>
+  
+      </section>
+    </section>
+
+
+    <section class="bg-white rounded-lg grid gap-5 grid-cols-1 grid-rows-[500px] py-20 section__introduccion contenedor mx-auto my-20 p-20 lg:grid-cols-2">
+      <div class="flex flex-col  justify-center">
+          <p class="text-2xl text-[#323756]">
+              Gracias a <strong>Fundación Operación Sonrisa Ecuador</strong>, organización sin fines de lucro, como zona Austro brindamos atención integral y <strong>tratamiento de especialidad</strong> a niños y jóvenes con fisuras de labio y paladar en situación de vulnerabilidad mejorando su <strong>calidad de vida</strong> y la de sus familias.
+          </p>
+
+          <h2 class="text-base mt-10 m-0">Dr. Henrry Aguirre</h2>
+          <p class="text-sm">Cirujano Plástico, Estético & Reconstructivo</p>
+      </div>
+      <div>
+        <video controls>
+          <source src="../../img/sonrisaconvertido2.mp4" type="video/mp4" />
+        </video>
+      </div>
+  </section>
+
+
+  <section class="contenedor mx-auto my-20 px-5">
+    <h2>Cirugía Reconstructiva Labio <br> Fisurado o Paladar Hendido</h2>
+    <p>Este tipo de cirugía se hace para corregir un defecto físico, causado por un labio leporino o paladar hendido. Es importante corregir estas afecciones ya que pueden causar problemas con la lactancia, la alimentación o el habla.</p>
+</section>
+
+
+  <section class="bg-[#94c3e3a4] py-10 px-5">
+    <div class="contenedor mx-auto flex flex-col justify-center items-center">
+      <p class="mb-5 bg-red-100 inline-block text-black px-4 font-normal rounded-md text-sm tracking-widest">IMPORTANTE</p>
+      <p class="text-[#fff] font-extralight text-6xl text-center mb-10">Varios pacientes con fisura de labio y paladar hendido consultas de <strong>especiadad gratuitas</strong></p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/kzXkdr24A1k?si=2csS42yB3kqpoeHX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+  </section>
+
+<SliderOperacionSonrisa />
+
+<section class="contenedor mx-auto">
+
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="/img/operasonr1.avif" alt="Imagen">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="/img/operasonr2.avif" alt="Imagen">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="/img/operasonr3.avif" alt="Imagen">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="/img/operasonr4.avif" alt="Imagen">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="/img/operasonr5.avif" alt="Imagen">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="/img/operasonr6.avif" alt="Imagen">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="/img/operasonr7.avif" alt="Imagen">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="/img/operasonr8.avif" alt="Imagen">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="/img/operasonr9.avif" alt="Imagen">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="/img/operasonr1.avif" alt="Imagen">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="/img/operasonr2.avif" alt="Imagen">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="/img/operasonr3.avif" alt="Imagen">
+      </div>
+  </div>
+</div>
+
+</section>
+
+    <footer>
+      <Footer />
+    </footer>
+
+
+  </main>
+</Layout>
+
+<style lang="scss">
+
+  .sobre__sobre__cirugia i{
+    font-size: .9rem;
+    margin-right: .5rem;
+  }
+
+  /*
+  #hero {
+    position: relative;
+  }
+
+  .promo {
+    position: relative;
+    z-index: 2;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.5;
+    mix-blend-mode: luminosity;
+  } */
+
+  .section__introduccion{
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+
+  .color__back__menu {
+    border-top: 0.9px solid #e8f1ffd7;
+    border-bottom: 0.9px solid #e8f1ffd7;
+
+    /* background-color: #e8f1ff75; */
+  }
+
+
+  .bg_header__fondo {
+  background-image: url(../img/nino-haciendo-deporte-casa.avif);
+  background-size: cover;
+  background-position: top;
+  box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5);
+
+  
+  background-image: linear-gradient(
+      to right top,
+      #d6dae0,
+      #ccd0d7,
+      #c2c7ce,
+      #b8bdc6,
+      #aeb4bd,
+      #aeb4bd,
+      #aeb4bd,
+      #aeb4bd,
+      #b8bdc6,
+      #c2c7ce,
+      #ccd0d7,
+      #d6dae0
+    );
+    border-bottom: 1px solid #eaeaea;
+  } 
+</style>

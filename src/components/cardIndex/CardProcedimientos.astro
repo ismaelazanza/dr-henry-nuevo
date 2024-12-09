@@ -1,0 +1,25 @@
+---
+interface Props {
+	title: string;
+	href: string;
+	src: string;
+}
+
+const { src, title, href } = Astro.props;
+---
+
+<a class="flex flex-col justify-center items-center border__shadom p-8 hover:translate-y-1 transition-all" href={href}>
+    <img src={src} width="60" alt="Icono">
+  <p class="pt-5 uppercase text-sm tracking-widest text-[#323756]">{title}</p>
+</a>
+
+<style lang="scss">
+
+.border__shadom{
+    background: #fff;
+    border-radius: .3rem;
+    
+    
+}
+
+</style>

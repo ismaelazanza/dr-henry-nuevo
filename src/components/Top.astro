@@ -1,0 +1,88 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="bg__arriba">
+    <div class="contenedor mx-auto h-8 flex items-center justify-between px-5">
+        <div class="flex items-center">
+            <p class="text-white mr-2 text-sm">Redes Sociales:</p>
+            <div class="flex">
+                <a
+                    href="https://www.facebook.com/dr.henryaguirre"
+                    target="_blank"
+                >
+                    <Icon
+                        name="ph:facebook-logo-light"
+                        class="text-white w-5 h-5 hover:text-[#005d99] transition-all"
+                    />
+                </a>
+                <a
+                    href="https://www.instagram.com/drhenryaguirre/"
+                    target="_blank"
+                >
+                    <Icon
+                        name="ph:instagram-logo-light"
+                        class="text-white w-5 h-5 hover:text-[#005d99] transition-all"
+                    />
+                </a>
+                <a
+                    href="https://www.tiktok.com/@drhenryaguirre"
+                    target="_blank"
+                >
+                    <Icon
+                        name="ph:tiktok-logo-light"
+                        class="text-white w-5 h-5 hover:text-[#005d99] transition-all"
+                    />
+                </a>
+                <a href="https://twitter.com/drhenryaguirre" target="_blank">
+                    <Icon
+                        name="ph:twitter-logo-light"
+                        class="text-white w-5 h-5 hover:text-[#005d99] transition-all"
+                    />
+                </a>
+                <a href="" target="_blank">
+                    <Icon
+                        name="ph:whatsapp-logo-light"
+                        class="text-white w-5 h-5 hover:text-[#005d99] transition-all"
+                    />
+                </a>
+                <a
+                    href="https://www.linkedin.com/company/dr-henry-aguirre/"
+                    target="_blank"
+                >
+                    <Icon
+                        name="ph:linkedin-logo-light"
+                        class="text-white w-5 h-5 hover:text-[#005d99] transition-all"
+                    />
+                </a>
+            </div>
+        </div>
+        <div class="parte__derecha__top flex items-center">
+<p class="text-white text-sm font-light tracking-wide hidden lg:block">CONOCE EL SIGNIFICADO DE CALIDAD INSUPERABLE
+</p>
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    .bg__arriba {
+        background-image: linear-gradient(
+            to right top,
+            #3ca9d2,
+            #38a4d3,
+            #379fd3,
+            #399ad3,
+            #3c95d2
+        );
+
+        a {
+            margin-right: 0.3rem;
+        }
+
+        .parte__derecha__top{
+            a{
+                margin-left: 1rem;
+            }
+        }
+    }
+</style>

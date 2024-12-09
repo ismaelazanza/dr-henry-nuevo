@@ -1,0 +1,43 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+	title: string;
+	href: string;
+	des: string;
+    img?: string;
+}
+
+const { des, title, href, img } = Astro.props;
+---
+<a class=" grid grid-cols-3 hover:translate-y-1 transition-all" href={href}>
+
+    <div class="img__tarjeta__izquieda col-[1/2]">
+        <img src={img} alt="Imagen">
+    </div>
+
+    <div class="p-5 col-[2/4]">
+
+        <h2 class="text-lg" >{title}</h2>
+        <p class="text-sm">{des}</p>
+        <Icon name="bi:arrow-right" class="w-6 text-[#005d99] mt-5">;
+    </div>
+
+</a>
+
+<style>
+
+    a{
+        background-color: #fff;
+        border-radius: .5rem;
+    }
+
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+    }
+
+</style>
