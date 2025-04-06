@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 import Top from "../components/Top.astro";
 import Menu from "../components/Menu.astro";
@@ -7,72 +7,66 @@ import CardProcedimiento from "../components/cardIndex/CardProcedimientos.astro"
 import BiografiaIndex from "../components/cardIndex/BiografiaIndex.astro";
 import BannerContacto from "../components/cardIndex/BannerContacto.astro";
 import CardCuadros from "../components/cardIndex/CardCuadros.astro";
-import Testimonial from "../components/cardIndex/Testimonial.astro"
+import Testimonial from "../components/cardIndex/Testimonial.astro";
 import Footer from "../components/Footer.astro";
 import MenuMobil from "../components/MenuMobil.astro";
 import PlayerPrueba from "../components/PlayerPrueba.astro";
-
+import SliderIndex from "../components/SliderIndex.astro";
 ---
-
-
 
 <Layout title="Dr Henry Aguirre | Cirujano Plástico">
   <main>
     <header class="ocutar">
       <Top />
 
-      <div class="bg_header__fondo animate-fade animate-duration-[900ms]">
+      <div class="animate-fade animate-duration-[900ms]">
         <div class="lg:hidden">
           <MenuMobil />
         </div>
         <div class="color__back__menu hidden lg:block">
           <div
-            class="contenedor mx-auto flex justify-center items-center h-16"
+            class="contenedor mx-auto flex flex-col items-center justify-center animate-fade-up animate-once animate-duration-500 animate-delay-400"
           >
+            <a href="/">
+              <img
+                class="my-10"
+                width="300"
+                src="/img/logodrvertical.svg"
+                alt="Logo"
+              />
+            </a>
+          </div>
+          <div class="contenedor mx-auto flex justify-center items-center h-16">
             <div class="">
               <Menu />
             </div>
           </div>
         </div>
-
-        <div
-          class="contenedor mx-auto flex flex-col items-center justify-center h-[40rem] animate-fade-up animate-once animate-duration-500 animate-delay-400"
-        >
-        <a href="/">
-          <img
-            class="mb-10"
-            width="400"
-            src="/img/logodrvertical.svg"
-            alt="Logo"
-          />
-        </a>
-
-          <h1
-            class="text-center text-[#005d99] tracking-widest font-extralight animate-fade-up animate-once animate-duration-500 animate-delay-200"
-          >
-            ESTAMOS COMPROMETIDOS CON LA <br />
-            <strong>SEGURIDAD PERSONAL</strong> DE NUESTROS PACIENTES Y <br />
-             LOS <strong>RESULTADOS QUE DESEAN OBTENER</strong>
-          </h1>
-          <img src="/img/soloslogan.svg" alt="Firma" />
-        </div>
       </div>
     </header>
 
+    <SliderIndex />
+
     <div class="contenedor mx-auto my-32 px-5 ocutar">
-      <h2 class="text-center animate-fade-up animate-once animate-duration-500 animate-delay-[400ms] text-2xl sm:text-4xl">
-        ¿Estas buscando cirugía plástica con <br /> resultados muy naturales y
-        exclusivos para ti?
+      <h2
+        class="text-center py-6 animate-fade-up animate-once animate-duration-500 animate-delay-[400ms] text-4xl sm:text-4xl"
+      >
+        ¿Estas buscando cirugía plástica con <br /> resultados muy naturales y exclusivos
+        para ti?
       </h2>
-      <p class="text-center animate-fade-up animate-once animate-duration-500 animate-delay-[600ms] text-base lg:text-xl">
+      <p
+        class="text-center animate-fade-up animate-once animate-duration-500 animate-delay-[600ms] text-base lg:text-xl"
+      >
         Descubre mi verdadera vocación como Cirujano Plástico: ayudarte a
-        alcanzar tu sueño de tener un cuerpo hermoso y <br /> sentirte más
-        segura que nunca. <strong
+        alcanzar tu sueño de tener un cuerpo hermoso y <br /> sentirte más segura
+        que nunca. <strong
           >¡Tu transformación está a solo un paso de distancia!</strong
         >
       </p>
-      <div class="grid grid-cols-1 text-center mt-10 animate-fade-up animate-once animate-duration-500 animate-delay-[800ms] lg:grid-cols-6">
-        <div class="col-[1/-1] lg:col-[3/4] ">
+      <div
+        class="grid grid-cols-1 text-center mt-10 animate-fade-up animate-once animate-duration-500 animate-delay-[800ms] lg:grid-cols-6"
+      >
+        <div class="col-[1/-1] lg:col-[3/4]">
           <p class="text-6xl font-semibold tracking-tighter">+13K</p>
           <p class="text-sm">Cirugías realizadas con éxito</p>
         </div>
@@ -83,7 +77,9 @@ import PlayerPrueba from "../components/PlayerPrueba.astro";
       </div>
     </div>
 
-    <div class="contenedor mx-auto grid grid-cols-1 gap-2 h-80 mt-32 mb-20 md:grid-cols-2 lg:grid-cols-3 lg:mb-10">
+    <div
+      class="contenedor mx-auto grid grid-cols-1 gap-2 h-80 mt-32 mb-20 md:grid-cols-2 lg:grid-cols-3 lg:mb-10"
+    >
       <a
         class="img__uno flex flex-col justify-end p-10 hover:shadow-2xl transition-all hover:scale-95"
         href="/procedimientos/lipoescultura"
@@ -126,13 +122,15 @@ import PlayerPrueba from "../components/PlayerPrueba.astro";
 
     <section class="py-32">
       <div class="contenedor mx-auto text-center">
-        <h2>Más Servicios</h2>
+        <h2 class="text-4xl">Más Servicios</h2>
         <p class="text-2xl text-[#323756] lg:text-4xl">
           Di ¡Hola! al cambio. Encuentra el <br /> procedimiento ideal para ti
         </p>
       </div>
 
-      <div class="contenedor mx-auto grid gap-2 grid-cols-1 mt-10 md:grid-cols-3 lg:grid-cols-6">
+      <div
+        class="contenedor mx-auto grid gap-2 grid-cols-1 mt-10 md:grid-cols-3 lg:grid-cols-6"
+      >
         <CardProcedimiento
           title="Mamoplastia"
           src="/img/011-breast.svg"
@@ -170,7 +168,9 @@ import PlayerPrueba from "../components/PlayerPrueba.astro";
     </section>
 
     <section class="bg-white pb-20">
-      <div class="contenedor mx-auto grid grid-cols-1 py-10 gap-y-8 px-5 md:grid-cols-2 lg:grid-cols-3 ">
+      <div
+        class="contenedor mx-auto grid grid-cols-1 py-10 gap-y-8 px-5 md:grid-cols-2 lg:grid-cols-3"
+      >
         <CardCuadros
           title="Glúteos"
           descripcion="Para algunas personas, tener glúteos pequeños o planos pueden causar inseguridad y baja autoestima."
@@ -210,8 +210,7 @@ import PlayerPrueba from "../components/PlayerPrueba.astro";
       </div>
     </section>
 
-    <PlayerPrueba/>
-
+    <PlayerPrueba />
 
     <section>
       <Testimonial />
@@ -220,7 +219,6 @@ import PlayerPrueba from "../components/PlayerPrueba.astro";
     <footer>
       <Footer />
     </footer>
-
   </main>
 </Layout>
 
@@ -234,7 +232,7 @@ import PlayerPrueba from "../components/PlayerPrueba.astro";
       box-shadow: inset 0 0 0 2000px rgba(248, 250, 252, 0.5);
 
       .color__back__menu {
-       /* background-color: #e8f1ff75;*/
+        /* background-color: #e8f1ff75;*/
       }
     }
   }
